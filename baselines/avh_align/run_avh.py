@@ -129,6 +129,8 @@ def main():
         groups = {}
         for name in ['val', 'test']:
             ids = set(splits[name])
+            if 'samples' in splits:
+                ids = set(splits['samples'][sid]['relative_path'].rsplit('.', 1)[0] for sid in splits[name])
             groups[name] = [v for v in scored if v['video_id'] in ids]
         thr_split = 'val'
     else:

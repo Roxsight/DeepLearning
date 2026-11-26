@@ -4,3 +4,7 @@ scikit-learn
 numpy
 pyyaml
 pytest
+opencv-python
+soundfile
+scipy
+tqdm

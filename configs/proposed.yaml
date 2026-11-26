@@ -1,5 +1,5 @@
 method: proposed
-splits: data/splits.json
+splits: splits/splits.json
 d: 256
 d_proj: 128
 T: 16
@@ -13,7 +13,7 @@ use_gate: true
 lam: 0.5
 tau: 0.07
 delta: 2
-pos_weight: 0.026
+pos_weight: null
 batch_size: 4
 accum: 4
 lr_visual: 1.0e-5
