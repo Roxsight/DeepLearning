@@ -182,7 +182,7 @@ def main():
     scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda)
     scaler = torch.amp.GradScaler(device.type, enabled=amp)
 
-    best_score = -1.0
+    best_score = -float('inf')
     best_path = 'results/ckpt/%s.pt' % tag
     os.makedirs('results/ckpt', exist_ok=True)
 
