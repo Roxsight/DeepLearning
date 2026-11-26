@@ -100,6 +100,8 @@ def main():
                 failures.append((sid, "missing_video"))
                 continue
             start, fps, total = get_window(video_path, args.audio_seconds)
+            if row.get("start"):
+                start = float(row["start"])
             n_frames = extract_frames(video_path, frame_dir, args.frames_per_video, args.image_size, start, args.audio_seconds, fps, total)
             if n_frames == 0:
                 failures.append((sid, "frame_extraction_failed"))
