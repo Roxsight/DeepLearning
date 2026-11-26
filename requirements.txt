@@ -1,0 +1,6 @@
+torch
+timm
+scikit-learn
+numpy
+pyyaml
+pytest
